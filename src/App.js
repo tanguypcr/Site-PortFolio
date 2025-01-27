@@ -7,7 +7,7 @@ import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
-import ExperiencesSection from './components/ExperiencesSection';
+import ExperiencesSection from './components/ExperiencesSection'; 
 
 function App() {
   return (
