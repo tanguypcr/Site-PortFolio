@@ -3,7 +3,7 @@ import { Tabs, Tab, Container } from 'react-bootstrap';
 import { FaGraduationCap, FaBriefcase } from 'react-icons/fa'; // Icônes pour la timeline
 import './Timeline.css'; // Custom CSS for the timeline
 
-const ExperiencesSection = () => {
+const CourseSection = () => {
   // Données pour le parcours académique
   const academicData = [
     {
@@ -29,7 +29,7 @@ const ExperiencesSection = () => {
       description: 'Participation au développement de solutions logicielles adaptées aux besoins des clients avec C#, Node.js et React.js.',
     },
     {
-      date: '2022',
+      date: 'Été 2022',
       title: 'Réceptionniste',
       subtitle: 'Leclerc Villeneuve-sur-Lot',
       description: 'Réception des palettes des camions, vérification des marchandises et gestion des stocks.',
@@ -37,9 +37,9 @@ const ExperiencesSection = () => {
   ];
 
   return (
-    <section id="experiences" className="py-5 bg-light">
+    <section id="course" className="py-5 bg-light">
       <Container>
-        <h2 className="text-center mb-5">Expériences</h2>
+        <h2 className="text-center mb-5">Parcours</h2>
         <Tabs defaultActiveKey="academic" id="experience-tabs" className="mb-4 justify-content-center">
           {/* Onglet Parcours académique */}
           <Tab eventKey="academic" title="Parcours académique">
@@ -84,4 +84,4 @@ const ExperiencesSection = () => {
   );
 };
 
-export default ExperiencesSection;
+export default CourseSection;

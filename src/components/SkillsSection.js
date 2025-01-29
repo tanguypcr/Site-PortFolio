@@ -1,57 +1,113 @@
 import React from 'react';
-import { Container, Row, Col, Card, ProgressBar } from 'react-bootstrap';
-import htmlLogo from '../assets/images/html.png';
-import jsLogo from '../assets/images/javascript.png';
-import reactLogo from '../assets/images/react.png';
-import csharpLogo from '../assets/images/csharp.png';
-import dotnetLogo from '../assets/images/dotnet.png';
-import javaLogo from '../assets/images/java.png';
-import javaFXLogo from '../assets/images/javafx.png';
-import sqlLogo from '../assets/images/sql.png';
-import angularLogo from '../assets/images/angular.png';
-import cssLogo from '../assets/images/css.png';
-import pythonLogo from '../assets/images/python.png';
-import cypherLogo from '../assets/images/cypher.png';
-import typescriptLogo from '../assets/images/typescript.png';
-import vueLogo from '../assets/images/vue.png';
-import symfonyLogo from '../assets/images/symfony.png';
+import { Accordion, Card, Container, ListGroup } from 'react-bootstrap';
+import { projects } from './ProjectsSection';
 
 const SkillsSection = () => {
-  const skills = [
-    { name: 'HTML', level: 80, logo: htmlLogo },
-    { name: 'CSS', level: 80, logo: cssLogo },
-    { name: 'JavaScript', level: 60, logo: jsLogo },
-    { name: 'TypeScript', level: 60, logo: typescriptLogo },
-    { name: 'Python', level: 70, logo: pythonLogo },
-    { name: 'Java', level: 85, logo: javaLogo },
-    { name: 'JavaFX', level: 65, logo: javaFXLogo },
-    { name: 'C#', level: 70, logo: csharpLogo },
-    { name: '.NET', level: 70, logo: dotnetLogo },
-    { name: 'SQL', level: 65, logo: sqlLogo },
-    { name: 'Cypher', level: 50, logo: cypherLogo },
-    { name: 'React', level: 80, logo: reactLogo },
-    { name: 'Angular', level: 60, logo: angularLogo },
-    { name: 'Vue', level: 55, logo: vueLogo },
-    { name: 'Symfony', level: 70, logo: symfonyLogo },
-    { name: 'GitHub', level: 75, logo: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' },
+  // Mapping des compétences du programme avec les clés utilisées dans les projets
+  const competences = [
+    {
+      programName: 'Réaliser',
+      projectSkill: 'Développer',
+      description: 'Développer une solution informatique pour un client',
+      ces: [
+        'CE1.0.1 | Respecter les exigences du client',
+        'CE1.0.2 | Appliquer les principes algorithmiques',
+        'CE1.0.3 | Garantir la qualité du code et documentation',
+        'CE1.0.4 | Choisir les ressources techniques appropriées',
+      ],
+    },
+    {
+      programName: 'Optimiser',
+      projectSkill: 'Optimiser',
+      description: 'Proposer des applications optimisées',
+      ces: [
+        'CE2.0.1 | Formaliser des situations complexes',
+        'CE2.0.2 | Utiliser des algorithmes et structures de données',
+        'CE2.0.3 | Appliquer des raisonnements logiques',
+        'CE2.0.4 | Justifier les choix techniques',
+      ],
+    },
+    {
+      programName: 'Administrer',
+      projectSkill: 'Administrer',
+      description: 'Maintenir des infrastructures informatiques',
+      ces: [
+        'CE3.0.1 | Gérer le système d\'information',
+        'CE3.0.2 | Appliquer les normes de sécurité',
+        'CE3.0.3 | Assurer la qualité de service',
+        'CE3.0.4 | Garantir la continuité d\'activité',
+      ],
+    },
+    {
+      programName: 'Gérer',
+      projectSkill: 'Gérer',
+      description: 'Exploiter les données de l\'entreprise',
+      ces: [
+        'CE4.0.1 | Respecter les réglementations',
+        'CE4.0.2 | Considérer les impacts économiques/écologiques',
+        'CE4.0.3 | S\'appuyer sur des bases mathématiques',
+        'CE4.0.4 | Assurer la qualité des données',
+      ],
+    },
+    {
+      programName: 'Conduire',
+      projectSkill: 'Conduire',
+      description: 'Satisfaire les besoins utilisateurs',
+      ces: [
+        'CE5.0.1 | Adopter une démarche proactive',
+        'CE5.0.2 | Respecter les règles juridiques',
+        'CE5.0.3 | Communiquer efficacement',
+        'CE5.0.4 | Sensibiliser à l\'éthique',
+      ],
+    },
+    {
+      programName: 'Collaborer',
+      projectSkill: 'Collaborer',
+      description: 'Travailler en équipe informatique',
+    },
   ];
 
   return (
     <Container id="skills" className="py-5">
-      <h2 className="text-center mb-4">Mes Compétences</h2>
-      <Row className="justify-content-center">
-        {skills.map((skill, index) => (
-          <Col md={3} key={index} className="mb-4 d-flex">
-            <Card className="h-100 w-100">
-              <Card.Img variant="top" src={skill.logo} alt={`${skill.name} logo`} style={{ height: '100px', objectFit: 'contain', marginTop: '20px' }} />
-              <Card.Body>
-                <Card.Title className="text-center">{skill.name}</Card.Title>
-                <ProgressBar now={skill.level} label={`${skill.level}%`} />
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+      <h2 className="text-center mb-4">Compétences du B.U.T Informatique</h2>
+      
+      <Accordion >
+        {competences.map((competence, index) => {
+          const relatedProjects = projects.filter(project => 
+            project.skills.includes(competence.projectSkill)
+          );
+
+          return (
+            <Accordion.Item key={index} eventKey={index.toString()}>
+              <Accordion.Header>
+                <strong>{competence.programName}</strong> : {competence.description}
+              </Accordion.Header>
+              
+              <Accordion.Body>
+                <h5 >Projets Associés :</h5>
+                {relatedProjects.length > 0 ? (
+                  <div className="d-flex flex-wrap gap-3">
+                    {relatedProjects.map((project, pIndex) => (
+                      <Card key={pIndex} style={{ width: '18rem' }}>
+                        <Card.Img 
+                          variant="top" 
+                          src={project.image} 
+                          style={{ height: '150px', objectFit: 'cover' }}
+                        />
+                        <Card.Body>
+                          <Card.Title>{project.name}</Card.Title>
+                        </Card.Body>
+                      </Card>
+                    ))}
+                  </div>
+                ) : (
+                  <p>Aucun projet associé pour cette compétence</p>
+                )}
+              </Accordion.Body>
+            </Accordion.Item>
+          );
+        })}
+      </Accordion>
     </Container>
   );
 };

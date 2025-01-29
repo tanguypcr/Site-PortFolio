@@ -10,7 +10,7 @@ const HomeSection = () => {
       <img 
         src={profileImage} 
         alt="Photo de profil" 
-        style={{ marginTop: '20px', borderRadius: '50%', width: '150px', height: '150px', objectFit: 'cover' }} 
+        style={{ marginTop: '20px', borderRadius: '50%', width: '175px', height: '175px', objectFit: 'cover' }} 
       />
     </Box>
   );
