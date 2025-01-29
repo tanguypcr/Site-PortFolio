@@ -5,7 +5,6 @@ const AboutSection = () => {
   return (
     <Box id="about" sx={{ padding: '40px 0', textAlign: 'justify' }}>
       <Typography variant="h4" gutterBottom>À propos de moi</Typography>
-      <Typography variant="body1">
         <Box style={{ marginBottom: '20px' }}>
           Je suis un <b>développeur passionné</b> avec une curiosité insatiable pour les nouvelles technologies et une créativité nourrie par mes diverses passions : les <b>jeux vidéo</b>, le <b>cinéma</b>, la <b>musique</b>, et le <b>sport</b>. Ces centres d'intérêt m'inspirent et m'aident à adopter des approches innovantes dans mes projets.
         </Box>
@@ -18,7 +17,6 @@ const AboutSection = () => {
         <Box style={{ marginBottom: '20px' }}>
           Que ce soit pour collaborer sur un projet, échanger sur des idées, ou partager des expériences, je suis toujours à la recherche de nouvelles opportunités pour apprendre et grandir.
         </Box>
-      </Typography>
     </Box>
   );
 };
