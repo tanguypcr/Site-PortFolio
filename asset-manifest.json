@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Site-Portfolio/static/css/main.e74d3b11.css",
-    "main.js": "/Site-Portfolio/static/js/main.a40f353e.js",
+    "main.js": "/Site-Portfolio/static/js/main.7786842f.js",
     "static/js/488.9561f9b8.chunk.js": "/Site-Portfolio/static/js/488.9561f9b8.chunk.js",
     "static/media/FlappyBird.png": "/Site-Portfolio/static/media/FlappyBird.6663fe3be69b64625b9a.png",
     "static/media/cypressTests.png": "/Site-Portfolio/static/media/cypressTests.b915db5b036d32d1f86a.png",
@@ -20,15 +20,16 @@
     "static/media/1000007566.jpg": "/Site-Portfolio/static/media/1000007566.90cc235e5c0c0848aa98.jpg",
     "static/media/typescript.png": "/Site-Portfolio/static/media/typescript.52ea0bc40ba11d507e7d.png",
     "static/media/jo2024.png": "/Site-Portfolio/static/media/jo2024.7978cd73f3f5a69aa42b.png",
+    "static/media/nomattitude.jpg": "/Site-Portfolio/static/media/nomattitude.0ee2b781f8f484b16e3a.jpg",
     "static/media/symfony.png": "/Site-Portfolio/static/media/symfony.a0a0d0c849072206eb98.png",
     "static/media/cypher.png": "/Site-Portfolio/static/media/cypher.e1e0f30a4b1da0310ff7.png",
     "index.html": "/Site-Portfolio/index.html",
     "main.e74d3b11.css.map": "/Site-Portfolio/static/css/main.e74d3b11.css.map",
-    "main.a40f353e.js.map": "/Site-Portfolio/static/js/main.a40f353e.js.map",
+    "main.7786842f.js.map": "/Site-Portfolio/static/js/main.7786842f.js.map",
     "488.9561f9b8.chunk.js.map": "/Site-Portfolio/static/js/488.9561f9b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e74d3b11.css",
-    "static/js/main.a40f353e.js"
+    "static/js/main.7786842f.js"
   ]
 }
